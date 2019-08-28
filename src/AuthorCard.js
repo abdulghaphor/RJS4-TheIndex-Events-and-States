@@ -3,8 +3,12 @@ import React from "react";
 function AuthorCard(props) {
   const author = props.author;
   const authorName = `${author.first_name} ${author.last_name}`;
+  const selectAuthor = props.toggle;
   return (
-    <div className="col-lg-4 col-md-6 col-12">
+    <div
+      onClick={() => selectAuthor(author)}
+      className="col-lg-4 col-md-6 col-12"
+    >
       <div className="card">
         <div className="image">
           <img
